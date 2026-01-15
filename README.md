@@ -59,7 +59,7 @@ Connects an entity to a specific geographic location for spatial analysis.
 ## Architecture
 
 ### Core Realm Scope
-![D3A Core Architecture](documentPic/coreRealmScope_new.png)
+![D3A Core Architecture](documentPic/coreRealmScope.png)
 
 ---
 
@@ -132,4 +132,4 @@ com.github.d3a.realmExample.Island_GeoData_Realm_Generator
 
 ## Platform Architecture
 
-![System Architecture](documentPic/sysStructure_new.png)
+![System Architecture](documentPic/sysStructure.png)
