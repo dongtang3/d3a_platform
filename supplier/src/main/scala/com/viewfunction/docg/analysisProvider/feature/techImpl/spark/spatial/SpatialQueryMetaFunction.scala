@@ -1,10 +1,10 @@
-package com.github.tgda.supplier.feature.techImpl.spark.spatial
+package com.github.d3a.supplier.feature.techImpl.spark.spatial
 
-import com.github.tgda.supplier.feature.common.GlobalDataAccessor
-import com.github.tgda.supplier.fundamental.spatial.SpatialDirectionType.SpatialDirectionType
-import com.github.tgda.supplier.fundamental.spatial.SpatialOrderType.SpatialOrderType
-import com.github.tgda.supplier.fundamental.spatial.SpatialPredicateType.SpatialPredicateType
-import com.github.tgda.supplier.fundamental.spatial.{SpatialOrderType, SpatialPredicateType}
+import com.github.d3a.supplier.feature.common.GlobalDataAccessor
+import com.github.d3a.supplier.fundamental.spatial.SpatialDirectionType.SpatialDirectionType
+import com.github.d3a.supplier.fundamental.spatial.SpatialOrderType.SpatialOrderType
+import com.github.d3a.supplier.fundamental.spatial.SpatialPredicateType.SpatialPredicateType
+import com.github.d3a.supplier.fundamental.spatial.{SpatialOrderType, SpatialPredicateType}
 import org.apache.sedona.core.enums.GridType
 import org.apache.sedona.sql.utils.Adapter
 import org.apache.spark.sql.DataFrame
@@ -447,7 +447,7 @@ class SpatialQueryMetaFunction {
 
   def spatialDirectionalQuery(globalDataAccessor:GlobalDataAccessor,queryPointWKT:String,spatialDirectionType:SpatialDirectionType,
                               operationSourceDataFrame:String,spatialAttributeName:String,resultDFAttributes:mutable.Buffer[String],resultDataFrameName:String):DataFrame={
-    // <, > 等运算符的含义？？
+    // <, > 等运算符的含义？�?
     val spatialFunctionComputeDfQueryString = "SELECT * FROM "+ operationSourceDataFrame + " WHERE " + spatialAttributeName + " <= " + "ST_GeomFromWKT(\""+queryPointWKT+"\")"
     val spatialFunctionComputeDf = globalDataAccessor._getDataFrameFromSparkSQL(resultDataFrameName,spatialFunctionComputeDfQueryString.stripMargin)
     spatialFunctionComputeDf

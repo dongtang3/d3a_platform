@@ -1,4 +1,4 @@
-package com.github.tgda.supplier.fundamental.dataSlice
+package com.github.d3a.supplier.fundamental.dataSlice
 
 object ResponseDataSourceTech  extends Enumeration {
   type ResponseDataSourceTech = Value

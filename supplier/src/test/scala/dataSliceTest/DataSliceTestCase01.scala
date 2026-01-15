@@ -1,7 +1,7 @@
 package dataSliceTest
 
-import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.DataSlicePropertyType
-import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.DataServiceInvoker
+import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.DataSlicePropertyType
+import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.DataServiceInvoker
 
 import java.util
 import java.util.Date

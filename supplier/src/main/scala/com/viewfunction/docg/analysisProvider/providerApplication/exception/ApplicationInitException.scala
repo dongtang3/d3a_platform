@@ -1,4 +1,4 @@
-package com.github.tgda.supplier.providerApplication.exception
+package com.github.d3a.supplier.providerApplication.exception
 
 class ApplicationInitException extends Exception{
 

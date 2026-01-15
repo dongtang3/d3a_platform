@@ -1,4 +1,4 @@
-package com.github.tgda.dataCollector.neo4j;
+package com.github.d3a.dataCollector.neo4j;
 
 import org.neo4j.annotations.service.ServiceProvider;
 import org.neo4j.dbms.api.DatabaseManagementService;

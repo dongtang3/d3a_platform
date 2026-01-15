@@ -1,9 +1,9 @@
 package applicationServiceTest;
 
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.receiver.AvroMessageHandler;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.receiver.AvroMessageReceiver;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.receiver.AvroMessageHandler;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.receiver.AvroMessageReceiver;
 import org.apache.avro.generic.GenericRecord;
 
 import java.util.concurrent.ExecutorService;

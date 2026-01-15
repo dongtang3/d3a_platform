@@ -1,11 +1,11 @@
-package com.github.tgda.supplier.feature.communicationRouter
+package com.github.d3a.supplier.feature.communicationRouter
 
 import akka.actor.ActorRef
-import com.github.tgda.supplier.feature.communication.messagePayload.{AnalyseRequest, AnalyseResponse}
-import com.github.tgda.supplier.providerApplication.communication.CommunicationMessageHandler
-import com.github.tgda.supplier.feature.common.GlobalDataAccessor
-import com.github.tgda.supplier.feature.communication.messagePayload.spatialAnalysis.{AdministrativeDivisionSpatialCalculateRequest, SpatialPropertiesAggregateStatisticRequest}
-import com.github.tgda.supplier.feature.functionalFeatures.{AdministrativeDivisionBasedSpatialAnalysis, SpatialPropertiesStatisticAndAnalysis}
+import com.github.d3a.supplier.feature.communication.messagePayload.{AnalyseRequest, AnalyseResponse}
+import com.github.d3a.supplier.providerApplication.communication.CommunicationMessageHandler
+import com.github.d3a.supplier.feature.common.GlobalDataAccessor
+import com.github.d3a.supplier.feature.communication.messagePayload.spatialAnalysis.{AdministrativeDivisionSpatialCalculateRequest, SpatialPropertiesAggregateStatisticRequest}
+import com.github.d3a.supplier.feature.functionalFeatures.{AdministrativeDivisionBasedSpatialAnalysis, SpatialPropertiesStatisticAndAnalysis}
 
 class AnalysisProviderCommunicationMessageHandler(globalDataAccessor :GlobalDataAccessor) extends CommunicationMessageHandler{
   override def handleMessage(communicationMessage: Any, communicationActor: ActorRef, senderActor: ActorRef): Unit = {
@@ -22,7 +22,7 @@ class AnalysisProviderCommunicationMessageHandler(globalDataAccessor :GlobalData
         case communicationMessage: String =>
           println(s" $communicationMessage")
         /*
-        case communicationMessage: messagePayload.communication.feature.analysisProvider.com.github.tgda.AnalyzeTreesCrownAreaInSection =>
+        case communicationMessage: messagePayload.communication.feature.analysisProvider.com.github.d3a.AnalyzeTreesCrownAreaInSection =>
           //senderActor.tell("Reply for AnalyzeTreesCrownAreaInSection Executed "+communicationMessage.getRequestUUID , communicationActor)
           println(communicationMessage.getTreeCrownType+" "+communicationMessage.getRequestUUID+" "+communicationMessage.getRequestDateTime)
           val result = EcologicalEnvironmentAnalysis.executeSparkTreesCrownAreaCal2(globalDataAccessor,"TreeCanopy","CommunityReportingArea")

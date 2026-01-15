@@ -1,11 +1,11 @@
 package providerClientTest;
 
-import com.github.tgda.supplier.client.AnalysisProviderClient;
-import com.github.tgda.supplier.client.exception.AnalysisEngineRuntimeException;
-import com.github.tgda.supplier.client.exception.ProviderClientInitException;
-import com.github.tgda.supplier.feature.communication.AnalyseResponseCallback;
-import com.github.tgda.supplier.feature.communication.messagePayload.AnalyseResponse;
-import com.github.tgda.supplier.feature.communication.messagePayload.AnalyzeTreesCrownAreaInSection;
+import com.github.d3a.supplier.client.AnalysisProviderClient;
+import com.github.d3a.supplier.client.exception.AnalysisEngineRuntimeException;
+import com.github.d3a.supplier.client.exception.ProviderClientInitException;
+import com.github.d3a.supplier.feature.communication.AnalyseResponseCallback;
+import com.github.d3a.supplier.feature.communication.messagePayload.AnalyseResponse;
+import com.github.d3a.supplier.feature.communication.messagePayload.AnalyzeTreesCrownAreaInSection;
 
 import java.util.Date;
 

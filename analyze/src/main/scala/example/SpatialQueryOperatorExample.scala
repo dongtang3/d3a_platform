@@ -1,10 +1,10 @@
 package example
 
-import com.github.tgda.dataAnalyze.util.coreRealm.GeospatialScaleLevel
-import com.github.tgda.dataAnalyze.util.dataSlice.DataSliceOperationUtil
-import com.github.tgda.dataAnalyze.util.spark.DataSliceSparkAccessor
-import com.github.tgda.dataAnalyze.util.spark.spatial.SpatialDirectionType.SpatialDirectionType
-import com.github.tgda.dataAnalyze.util.spark.spatial.{SpatialDirectionType, SpatialOrderType, SpatialPredicateType, SpatialQueryOperator, SpatialQueryParam}
+import com.github.d3a.dataAnalyze.util.coreRealm.GeospatialScaleLevel
+import com.github.d3a.dataAnalyze.util.dataSlice.DataSliceOperationUtil
+import com.github.d3a.dataAnalyze.util.spark.DataSliceSparkAccessor
+import com.github.d3a.dataAnalyze.util.spark.spatial.SpatialDirectionType.SpatialDirectionType
+import com.github.d3a.dataAnalyze.util.spark.spatial.{SpatialDirectionType, SpatialOrderType, SpatialPredicateType, SpatialQueryOperator, SpatialQueryParam}
 
 import scala.collection.mutable
 

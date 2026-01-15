@@ -1,4 +1,4 @@
-package com.github.tgda.dataCollector.eventStreaming.kafka.sender;
+package com.github.d3a.dataCollector.eventStreaming.kafka.sender;
 
 import org.apache.kafka.clients.producer.RecordMetadata;
 

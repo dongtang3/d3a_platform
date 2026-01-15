@@ -1,4 +1,4 @@
-package com.github.tgda.dataCollector.payload;
+package com.github.d3a.dataCollector.payload;
 
 public class RelationshipEntityMetaInfo {
 

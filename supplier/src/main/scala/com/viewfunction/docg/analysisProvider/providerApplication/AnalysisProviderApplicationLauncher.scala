@@ -1,11 +1,11 @@
-package com.github.tgda.supplier.providerApplication
+package com.github.d3a.supplier.providerApplication
 
 import akka.actor.{ActorSystem, Props}
 import com.typesafe.config.ConfigFactory
-import com.github.tgda.supplier.providerApplication.communication.CommunicationActor
-import com.github.tgda.supplier.providerApplication.exception.ApplicationInitException
-import com.github.tgda.supplier.feature.common.GlobalDataAccessor
-import com.github.tgda.supplier.feature.communicationRouter.AnalysisProviderCommunicationMessageHandler
+import com.github.d3a.supplier.providerApplication.communication.CommunicationActor
+import com.github.d3a.supplier.providerApplication.exception.ApplicationInitException
+import com.github.d3a.supplier.feature.common.GlobalDataAccessor
+import com.github.d3a.supplier.feature.communicationRouter.AnalysisProviderCommunicationMessageHandler
 
 import scala.io.StdIn
 
@@ -65,8 +65,8 @@ object AnalysisProviderApplicationLauncher {
          |    }
          |    serialization-bindings {
          |      "java.io.Serializable" = none
-         |      "messagePayload.communication.feature.analysisProvider.com.github.tgda.AnalyseRequest" = kryo
-         |      "messagePayload.communication.feature.analysisProvider.com.github.tgda.AnalyseResponse" = kryo
+         |      "messagePayload.communication.feature.analysisProvider.com.github.d3a.AnalyseRequest" = kryo
+         |      "messagePayload.communication.feature.analysisProvider.com.github.d3a.AnalyseResponse" = kryo
          |    }
          |  }
          |  remote {

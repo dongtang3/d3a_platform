@@ -4,8 +4,8 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 
-import com.github.tgda.supplier.communication.CommunicationActor;
-import com.github.tgda.supplier.feature.communication.messagePayload.AnalyzeTreesCrownAreaInSection;
+import com.github.d3a.supplier.communication.CommunicationActor;
+import com.github.d3a.supplier.feature.communication.messagePayload.AnalyzeTreesCrownAreaInSection;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 

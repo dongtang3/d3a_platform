@@ -1,8 +1,8 @@
 package analysisExample
 
-import com.github.tgda.supplier.feature.common.{GlobalDataAccessor, ResultSetConvertor}
-import com.github.tgda.supplier.providerApplication.AnalysisProviderApplicationUtil
-import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.CoreRealmOperationUtil
+import com.github.d3a.supplier.feature.common.{GlobalDataAccessor, ResultSetConvertor}
+import com.github.d3a.supplier.providerApplication.AnalysisProviderApplicationUtil
+import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.CoreRealmOperationUtil
 import ml.sparkling.graph.api.operators.measures.VertexMeasureConfiguration
 import org.apache.spark.graphx.{Edge, Graph, PartitionStrategy, VertexId}
 import org.apache.spark.rdd.RDD

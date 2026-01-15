@@ -2,16 +2,16 @@ package applicationServiceTest;
 
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageFormatErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.SchemaFormatErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadContent;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadContentType;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadMetaInfo;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsMessageTargetInfo;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.sender.CommonObjectsMessageSender;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.sender.MessageSentEventHandler;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageFormatErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.SchemaFormatErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadContent;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadContentType;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadMetaInfo;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsMessageTargetInfo;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.sender.CommonObjectsMessageSender;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.sender.MessageSentEventHandler;
 import org.apache.commons.codec.binary.Base64;
 
 import java.io.*;
@@ -36,7 +36,7 @@ public class CommonObjectsMessageSenderTest {
         commonObjectsPayloadContent.setIncludingContent(CommonObjectsPayloadContentType.ALL);
         commonObjectsPayloadContent.setTextContentEncoded(true);
 
-        String textContent="Message 0123456789023456789中文Ωß∂ç√∂©©ƒƒß≈√ƒ";
+        String textContent="Message 0123456789023456789中文Ωß∂ç√∂©©ƒƒß≈√�?;
         ObjectNode node = JsonNodeFactory.instance.objectNode();
         node.put("field001",1);
         node.put("field002",new Date().getTime());

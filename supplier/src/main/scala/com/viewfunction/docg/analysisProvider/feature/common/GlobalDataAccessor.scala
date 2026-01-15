@@ -1,9 +1,9 @@
-package com.github.tgda.supplier.feature.common
+package com.github.d3a.supplier.feature.common
 
-import com.github.tgda.supplier.fundamental.spatial.GeospatialScaleLevel.{CountryLevel, GeospatialScaleLevel, GlobalLevel, LocalLevel}
-import com.github.tgda.supplier.providerApplication.AnalysisProviderApplicationUtil
-import com.github.tgda.compute.applicationCapacity.compute.dataComputeUnit.dataService.{DataServiceInvoker, DataSlice}
-import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.CoreRealmOperationUtil
+import com.github.d3a.supplier.fundamental.spatial.GeospatialScaleLevel.{CountryLevel, GeospatialScaleLevel, GlobalLevel, LocalLevel}
+import com.github.d3a.supplier.providerApplication.AnalysisProviderApplicationUtil
+import com.github.d3a.compute.applicationCapacity.compute.dataComputeUnit.dataService.{DataServiceInvoker, DataSlice}
+import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.CoreRealmOperationUtil
 import org.apache.sedona.sql.utils.SedonaSQLRegistrator
 import org.apache.sedona.viz.core.Serde.SedonaVizKryoRegistrator
 import org.apache.spark.graphx.{Edge, VertexId}

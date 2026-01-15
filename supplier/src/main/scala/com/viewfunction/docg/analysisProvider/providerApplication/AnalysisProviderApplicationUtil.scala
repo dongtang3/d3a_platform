@@ -1,4 +1,4 @@
-package com.github.tgda.supplier.providerApplication
+package com.github.d3a.supplier.providerApplication
 
 import java.io.{File, FileInputStream}
 import java.util.{Date, Properties}

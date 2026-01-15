@@ -1,4 +1,4 @@
-package com.github.tgda.supplier.feature.functionalFeatures
+package com.github.d3a.supplier.feature.functionalFeatures
 
 object GraphStatisticAndAnalysis {
 

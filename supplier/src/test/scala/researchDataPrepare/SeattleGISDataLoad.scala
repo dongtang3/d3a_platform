@@ -1,8 +1,8 @@
 package researchDataPrepare
 
-import com.github.tgda.supplier.feature.common.GlobalDataAccessor
-import com.github.tgda.supplier.fundamental.dataMaintenance.SpatialDataMaintainUtil
-import com.github.tgda.supplier.providerApplication.AnalysisProviderApplicationUtil
+import com.github.d3a.supplier.feature.common.GlobalDataAccessor
+import com.github.d3a.supplier.fundamental.dataMaintenance.SpatialDataMaintainUtil
+import com.github.d3a.supplier.providerApplication.AnalysisProviderApplicationUtil
 
 import java.io.File
 import java.util

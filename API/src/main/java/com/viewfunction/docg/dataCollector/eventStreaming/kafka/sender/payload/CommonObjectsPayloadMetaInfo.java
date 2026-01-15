@@ -1,4 +1,4 @@
-package com.github.tgda.dataCollector.eventStreaming.kafka.sender.payload;
+package com.github.d3a.dataCollector.eventStreaming.kafka.sender.payload;
 
 public class CommonObjectsPayloadMetaInfo {
     private String senderId;

@@ -1,12 +1,12 @@
 package applicationServiceTest;
 
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadContent;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadMetaInfo;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsReceivedMessage;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.receiver.CommonObjectsMessageHandler;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.receiver.CommonObjectsMessageReceiver;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadContent;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsPayloadMetaInfo;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.payload.CommonObjectsReceivedMessage;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.receiver.CommonObjectsMessageHandler;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.receiver.CommonObjectsMessageReceiver;
 import org.apache.commons.codec.binary.Base64;
 
 import java.io.BufferedOutputStream;
@@ -32,14 +32,14 @@ public class CommonObjectsMessageReceiverTest {
                 System.out.println("SendTime: "+new Date(receivedMessage.getMessageSendTime()));
                 System.out.println("ReceivedTime: "+new Date(receivedMessage.getMessageReceivedTime()));
                 System.out.println("----------");
-                System.out.println("SenderIPï¼š "+ commonObjectsPayloadMetaInfo.getSenderIP());
-                System.out.println("SenderIdï¼š "+ commonObjectsPayloadMetaInfo.getSenderId());
-                System.out.println("SenderGroupï¼š "+ commonObjectsPayloadMetaInfo.getSenderGroup());
-                System.out.println("SenderCategoryï¼š "+ commonObjectsPayloadMetaInfo.getSenderCategory());
-                System.out.println("PayloadClassificationï¼š "+ commonObjectsPayloadMetaInfo.getPayloadClassification());
-                System.out.println("PayloadProcessorï¼š "+ commonObjectsPayloadMetaInfo.getPayloadProcessor());
-                System.out.println("PayloadTypeï¼š "+ commonObjectsPayloadMetaInfo.getPayloadType());
-                System.out.println("PayloadTypeDescï¼š "+ commonObjectsPayloadMetaInfo.getPayloadTypeDesc());
+                System.out.println("SenderIPï¼?"+ commonObjectsPayloadMetaInfo.getSenderIP());
+                System.out.println("SenderIdï¼?"+ commonObjectsPayloadMetaInfo.getSenderId());
+                System.out.println("SenderGroupï¼?"+ commonObjectsPayloadMetaInfo.getSenderGroup());
+                System.out.println("SenderCategoryï¼?"+ commonObjectsPayloadMetaInfo.getSenderCategory());
+                System.out.println("PayloadClassificationï¼?"+ commonObjectsPayloadMetaInfo.getPayloadClassification());
+                System.out.println("PayloadProcessorï¼?"+ commonObjectsPayloadMetaInfo.getPayloadProcessor());
+                System.out.println("PayloadTypeï¼?"+ commonObjectsPayloadMetaInfo.getPayloadType());
+                System.out.println("PayloadTypeDescï¼?"+ commonObjectsPayloadMetaInfo.getPayloadTypeDesc());
                 System.out.println("----------");
 
                 System.out.println("IncludingContent: "+ commonObjectsPayloadContent.getIncludingContent());

@@ -1,10 +1,10 @@
 package applicationServiceTest;
 
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.receiver.MessageHandler;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.receiver.PlainTextMessageHandler;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.receiver.UniversalMessageReceiver;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.receiver.MessageHandler;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.receiver.PlainTextMessageHandler;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.receiver.UniversalMessageReceiver;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

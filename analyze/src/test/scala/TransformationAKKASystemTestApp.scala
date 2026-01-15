@@ -1,6 +1,6 @@
 import akka.actor.{ActorSystem, Props}
 import com.typesafe.config.ConfigFactory
-import com.github.tgda.dataAnalyze.feature.transformation.messagePayload.AnalyzeTreesCrownAreaInSection
+import com.github.d3a.dataAnalyze.feature.transformation.messagePayload.AnalyzeTreesCrownAreaInSection
 
 object TransformationAKKASystemTestApp extends App{
   val config = ConfigFactory.parseString("""

@@ -1,15 +1,15 @@
-package com.github.tgda.dataCollector.eventStreaming.kafka.sender;
+package com.github.d3a.dataCollector.eventStreaming.kafka.sender;
 
-import com.github.tgda.dataCollector.eventStreaming.exception.ConfigurationErrorException;
-import com.github.tgda.dataCollector.eventStreaming.exception.MessageFormatErrorException;
-import com.github.tgda.dataCollector.eventStreaming.exception.MessageHandleErrorException;
-import com.github.tgda.dataCollector.eventStreaming.exception.SchemaFormatErrorException;
-import com.github.tgda.dataCollector.eventStreaming.kafka.sender.payload.CommonObjectsMessageTargetInfo;
-import com.github.tgda.dataCollector.eventStreaming.kafka.sender.payload.CommonObjectsPayloadContent;
-import com.github.tgda.dataCollector.eventStreaming.kafka.sender.payload.CommonObjectsPayloadContentType;
-import com.github.tgda.dataCollector.eventStreaming.kafka.sender.payload.CommonObjectsPayloadMetaInfo;
-import com.github.tgda.dataCollector.eventStreaming.kafka.sender.util.AvroUtils;
-import com.github.tgda.dataCollector.eventStreaming.kafka.sender.util.PayloadMetaInfo;
+import com.github.d3a.dataCollector.eventStreaming.exception.ConfigurationErrorException;
+import com.github.d3a.dataCollector.eventStreaming.exception.MessageFormatErrorException;
+import com.github.d3a.dataCollector.eventStreaming.exception.MessageHandleErrorException;
+import com.github.d3a.dataCollector.eventStreaming.exception.SchemaFormatErrorException;
+import com.github.d3a.dataCollector.eventStreaming.kafka.sender.payload.CommonObjectsMessageTargetInfo;
+import com.github.d3a.dataCollector.eventStreaming.kafka.sender.payload.CommonObjectsPayloadContent;
+import com.github.d3a.dataCollector.eventStreaming.kafka.sender.payload.CommonObjectsPayloadContentType;
+import com.github.d3a.dataCollector.eventStreaming.kafka.sender.payload.CommonObjectsPayloadMetaInfo;
+import com.github.d3a.dataCollector.eventStreaming.kafka.sender.util.AvroUtils;
+import com.github.d3a.dataCollector.eventStreaming.kafka.sender.util.PayloadMetaInfo;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericRecord;

@@ -1,20 +1,20 @@
-package com.github.tgda.supplier.feature.functionalFeatures
+package com.github.d3a.supplier.feature.functionalFeatures
 
-import com.github.tgda.supplier.exception.AnalysisProviderRuntimeException
-import com.github.tgda.supplier.feature.common.GlobalDataAccessor
-import com.github.tgda.supplier.feature.communication.messagePayload.{AnalyseRequest, AnalyseResponse, spatialAnalysis}
-import com.github.tgda.supplier.feature.techImpl.spark.spatial
-import com.github.tgda.supplier.feature.techImpl.spark.spatial.SpatialQueryMetaFunction
-import com.github.tgda.supplier.fundamental.spatial.GeospatialScaleGrade.GeospatialScaleGrade
-import com.github.tgda.supplier.fundamental.spatial.{GeospatialScaleGrade, GeospatialScaleLevel, SpatialAnalysisConstant, SpatialPredicateType}
-import com.github.tgda.supplier.fundamental.spatial.GeospatialScaleLevel.GeospatialScaleLevel
-import com.github.tgda.supplier.fundamental.spatial.SpatialPredicateType.SpatialPredicateType
-import util.com.github.tgda.engine.core.RealmConstant
-import com.github.tgda.compute.applicationCapacity.compute.dataComputeUnit.util.{CoreRealmOperationUtil, MassDataOperationUtil}
-import com.github.tgda.supplier.feature.communication.messagePayload.spatialAnalysis.{AdministrativeDivisionSpatialCalculateRequest, SpatialCommonConfig}
-import com.github.tgda.supplier.fundamental.dataSlice.DataSliceOperationUtil.getDataSlicePropertyType
-import com.github.tgda.supplier.fundamental.dataSlice.{DataSliceOperationConstant, DataSliceOperationUtil, ResponseDataSourceTech}
-import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.DataSlicePropertyType
+import com.github.d3a.supplier.exception.AnalysisProviderRuntimeException
+import com.github.d3a.supplier.feature.common.GlobalDataAccessor
+import com.github.d3a.supplier.feature.communication.messagePayload.{AnalyseRequest, AnalyseResponse, spatialAnalysis}
+import com.github.d3a.supplier.feature.techImpl.spark.spatial
+import com.github.d3a.supplier.feature.techImpl.spark.spatial.SpatialQueryMetaFunction
+import com.github.d3a.supplier.fundamental.spatial.GeospatialScaleGrade.GeospatialScaleGrade
+import com.github.d3a.supplier.fundamental.spatial.{GeospatialScaleGrade, GeospatialScaleLevel, SpatialAnalysisConstant, SpatialPredicateType}
+import com.github.d3a.supplier.fundamental.spatial.GeospatialScaleLevel.GeospatialScaleLevel
+import com.github.d3a.supplier.fundamental.spatial.SpatialPredicateType.SpatialPredicateType
+import util.com.github.d3a.engine.core.RealmConstant
+import com.github.d3a.compute.applicationCapacity.compute.dataComputeUnit.util.{CoreRealmOperationUtil, MassDataOperationUtil}
+import com.github.d3a.supplier.feature.communication.messagePayload.spatialAnalysis.{AdministrativeDivisionSpatialCalculateRequest, SpatialCommonConfig}
+import com.github.d3a.supplier.fundamental.dataSlice.DataSliceOperationUtil.getDataSlicePropertyType
+import com.github.d3a.supplier.fundamental.dataSlice.{DataSliceOperationConstant, DataSliceOperationUtil, ResponseDataSourceTech}
+import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.DataSlicePropertyType
 import org.apache.spark.api.java.function.ForeachPartitionFunction
 import org.apache.spark.sql.{DataFrame, Row}
 
@@ -27,7 +27,7 @@ object AdministrativeDivisionBasedSpatialAnalysis {
   @throws(classOf[AnalysisProviderRuntimeException])
   def doExecuteDataSliceAdministrativeDivisionSpatialCalculation(globalDataAccessor:GlobalDataAccessor,analyseResponse:AnalyseResponse,
                                                                administrativeDivisionSpatialCalculateRequest:AdministrativeDivisionSpatialCalculateRequest):
-  messagePayload.communication.feature.analysisProvider.com.github.tgda.ResponseDataset={
+  messagePayload.communication.feature.analysisProvider.com.github.d3a.ResponseDataset={
     val dataSlice = administrativeDivisionSpatialCalculateRequest.getSubjectConception
     val sliceGroup = "defaultGroup"
     val sampleValue:Double = administrativeDivisionSpatialCalculateRequest.getSampleValue
@@ -112,7 +112,7 @@ object AdministrativeDivisionBasedSpatialAnalysis {
                                                                administrativeDivisionAttributes: mutable.Buffer[String],
                                                                geospatialScaleLevel:GeospatialScaleLevel,
                                                                sampleValue:Double):
-  messagePayload.communication.feature.analysisProvider.com.github.tgda.ResponseDataset = {
+  messagePayload.communication.feature.analysisProvider.com.github.d3a.ResponseDataset = {
 
     if(sampleValue<=0 | sampleValue>1){
       throw new AnalysisProviderRuntimeException("sampleValue should in (0,1] range")
@@ -200,7 +200,7 @@ object AdministrativeDivisionBasedSpatialAnalysis {
     runtimeAdministrativeDivisionDataSliceName
   }
 
-  private def generateResultDataSet(globalDataAccessor:GlobalDataAccessor,dataFrame:DataFrame,analyseResponse:AnalyseResponse): messagePayload.communication.feature.analysisProvider.com.github.tgda.ResponseDataset = {
+  private def generateResultDataSet(globalDataAccessor:GlobalDataAccessor,dataFrame:DataFrame,analyseResponse:AnalyseResponse): messagePayload.communication.feature.analysisProvider.com.github.d3a.ResponseDataset = {
     val dataList = new java.util.ArrayList[java.util.HashMap[String,Object]]
     val structureFields =dataFrame.schema.fields
     val propertiesInfo = new java.util.HashMap[String,String]
@@ -249,7 +249,7 @@ object AdministrativeDivisionBasedSpatialAnalysis {
       */
     }
 
-    val responseData = new messagePayload.communication.feature.analysisProvider.com.github.tgda.ResponseDataset(propertiesInfo,dataList)
+    val responseData = new messagePayload.communication.feature.analysisProvider.com.github.d3a.ResponseDataset(propertiesInfo,dataList)
     analyseResponse.setResponseData(responseData)
     responseData
   }

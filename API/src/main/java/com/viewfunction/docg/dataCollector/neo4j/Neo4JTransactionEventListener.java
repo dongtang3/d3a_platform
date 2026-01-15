@@ -1,6 +1,6 @@
-package com.github.tgda.dataCollector.neo4j;
+package com.github.d3a.dataCollector.neo4j;
 
-import com.github.tgda.dataCollector.neo4j.dataGenerator.CoreRealmDataGenerator;
+import com.github.d3a.dataCollector.neo4j.dataGenerator.CoreRealmDataGenerator;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.Transaction;
 import org.neo4j.graphdb.event.TransactionData;

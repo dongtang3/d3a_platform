@@ -1,6 +1,6 @@
 import akka.actor.Actor
 import akka.util.Timeout
-import com.github.tgda.dataAnalyze.feature.transformation.messagePayload.AnalyzeTreesCrownAreaInSection
+import com.github.d3a.dataAnalyze.feature.transformation.messagePayload.AnalyzeTreesCrownAreaInSection
 
 import scala.concurrent.duration.DurationInt
 

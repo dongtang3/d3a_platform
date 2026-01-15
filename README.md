@@ -3,19 +3,18 @@
 
 
 
-
 ***
-# <span style="color:#CE0000;"> Temporal Geographical Data Analytics Platform Development Guide
+# <span style="color:#CE0000;"> D3A - Data Analysis & AI Algorithm Platform Development Guide
 
 
 
 #### ➜ Overview 
 
-TGDA platform based on Domain-Driven Design, A data analysis toolkit centered around graph data analysis and in-memory real-time computing technology. It can perform highly complex data analysis tasks using a business-oriented perspective, by utilizing capabilities such as relationship analysis, time analysis, and planar geographic spatial (GIS) analysis in a comprehensive manner that is easy to understand.
+D3A platform based on Domain-Driven Design, A data analysis toolkit centered around graph data analysis, AI algorithms, and in-memory real-time computing technology. It can perform highly complex data analysis tasks using a business-oriented perspective, by utilizing capabilities such as relationship analysis, time analysis, and planar geographic spatial (GIS) analysis in a comprehensive manner that is easy to understand.
 
 #### ➜ Term 
 
-TGDA The business model of the data analysis platform uses the following terms to describe the concepts of various objects required to implement a business domain model. By combining the functions of these objects, all the data management and analysis-related business requirements for a specific domain model can be achieved.
+D3A The business model of the data analysis platform uses the following terms to describe the concepts of various objects required to implement a business domain model. By combining the functions of these objects, all the data management and analysis-related business requirements for a specific domain model can be achieved.
 
 **Type**：Conceptual types refer to the types of any real or logical concepts that can be included in a specific domain model. It includes the type of all attribute view types that can be contained in objects of this type, as well as the type definitions of relationship attachment rules that can be performed on objects of this type.
 
@@ -61,7 +60,7 @@ Example of a domain concept: ![image](documentPic/graph_UndergroundPipelineNetwo
 Create a program:
 
 ```java
-generator.realmExample.com.github.tgda.UndergroundPipelineNetwork_Realm_Generator
+generator.realmExample.com.github.d3a.UndergroundPipelineNetwork_Realm_Generator
 ```
 
 ###### ↳ Song Playlists Realm
@@ -73,7 +72,7 @@ Example:![image](documentPic/graph_SongPlaylistsRealm.png)
 Create a program:
 
 ```java
-generator.realmExample.com.github.tgda.SongPlaylists_Realm_Generator
+generator.realmExample.com.github.d3a.SongPlaylists_Realm_Generator
 ```
 
 ###### ↳ Seattle RealTime Fire 911 Calls Realm
@@ -85,7 +84,7 @@ Example：![image](documentPic/graph_SeattleRealTimeFire911CallsRealm.png)
 Create a program:
 
 ```java
-generator.realmExample.com.github.tgda.SeattleRealTimeFire911Calls_Realm_Generator
+generator.realmExample.com.github.d3a.SeattleRealTimeFire911Calls_Realm_Generator
 ```
 
 ###### ↳ Road Weather Information Stations Records Realm
@@ -97,7 +96,7 @@ Example：![image](documentPic/graph_RoadWeatherInformationStationsRecordsRealm.
 Create a program:
 
 ```java
-generator.realmExample.com.github.tgda.RoadWeatherInformationStationsRecords_Realm_Generator
+generator.realmExample.com.github.d3a.RoadWeatherInformationStationsRecords_Realm_Generator
 ```
 
 ###### ↳ Island GeoSpatial Data Realm
@@ -109,7 +108,7 @@ Example：![image](documentPic/graph_Island_GeoDataRealm.png)
 Create a program:
 
 ```java
-generator.realmExample.com.github.tgda.Island_GeoData_Realm_Generator
+generator.realmExample.com.github.d3a.Island_GeoData_Realm_Generator
 ```
 
 #### ➜ Platform architecture components

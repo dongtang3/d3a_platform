@@ -1,6 +1,6 @@
-package com.github.tgda.dataCollector.eventStreaming.kafka.sender.util;
+package com.github.d3a.dataCollector.eventStreaming.kafka.sender.util;
 
-import com.github.tgda.dataCollector.eventStreaming.exception.SchemaFormatErrorException;
+import com.github.d3a.dataCollector.eventStreaming.exception.SchemaFormatErrorException;
 import org.apache.avro.Schema;
 
 import java.io.File;
@@ -14,9 +14,9 @@ public class AvroUtils {
 
     private static Map<String, Schema> schemas = new HashMap<String, Schema>();
 
-    public final static String PayloadMetaInfoSchemaName ="com.github.tgda.PayloadMetaInfo";
-    public final static String PayLoadContentSchemaName ="com.github.tgda.PayloadContent";
-    public final static String PayLoadSchemaName ="com.github.tgda.InfoObjectsPayLoad";
+    public final static String PayloadMetaInfoSchemaName ="com.github.d3a.PayloadMetaInfo";
+    public final static String PayLoadContentSchemaName ="com.github.d3a.PayloadContent";
+    public final static String PayLoadSchemaName ="com.github.d3a.InfoObjectsPayLoad";
 
     private AvroUtils(){}
 

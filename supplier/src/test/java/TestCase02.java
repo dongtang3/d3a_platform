@@ -15,9 +15,9 @@ public class TestCase02 {
             return 5;
         });
         try {
-            System.out.println(f.isDone()); //检测任务是否完成
+            System.out.println(f.isDone()); //检测任务是否完�?
             System.out.println(f.get(10000, TimeUnit.MILLISECONDS));
-            System.out.println(f.isDone()); //检测任务是否完成
+            System.out.println(f.isDone()); //检测任务是否完�?
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

@@ -1,17 +1,17 @@
-package com.github.tgda.supplier.fundamental.dataMaintenance
+package com.github.d3a.supplier.fundamental.dataMaintenance
 
-import com.github.tgda.supplier.exception.AnalysisProviderRuntimeException
-import com.github.tgda.supplier.fundamental.dataMaintenance
-import query.analysis.com.github.tgda.engine.core.QueryParameters
-import com.github.tgda.coreRealm.realmServiceCore.term.{AttributeDataType, AttributeKind}
-import termImpl.neo4j.spi.term.com.github.tgda.engine.core.Neo4JAttributeKindImpl
-import com.github.tgda.compute.applicationCapacity.compute.exception.{DataSliceExistException, DataSlicePropertiesStructureException}
-import com.github.tgda.supplier.fundamental.spatial.GeospatialScaleLevel.{CountryLevel, GeospatialScaleLevel, GlobalLevel, LocalLevel}
-import com.github.tgda.supplier.fundamental.spatial.SpatialAnalysisConstant
-import term.com.github.tgda.engine.core.Geospatial.GeospatialScaleGrade
-import util.com.github.tgda.engine.core.RealmConstant
-import com.github.tgda.compute.applicationCapacity.compute.dataComputeUnit.dataService.{DataServiceInvoker, DataSlice, DataSlicePropertyType}
-import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.CoreRealmOperationUtil
+import com.github.d3a.supplier.exception.AnalysisProviderRuntimeException
+import com.github.d3a.supplier.fundamental.dataMaintenance
+import query.analysis.com.github.d3a.engine.core.QueryParameters
+import com.github.d3a.coreRealm.realmServiceCore.term.{AttributeDataType, AttributeKind}
+import termImpl.neo4j.spi.term.com.github.d3a.engine.core.Neo4JAttributeKindImpl
+import com.github.d3a.compute.applicationCapacity.compute.exception.{DataSliceExistException, DataSlicePropertiesStructureException}
+import com.github.d3a.supplier.fundamental.spatial.GeospatialScaleLevel.{CountryLevel, GeospatialScaleLevel, GlobalLevel, LocalLevel}
+import com.github.d3a.supplier.fundamental.spatial.SpatialAnalysisConstant
+import term.com.github.d3a.engine.core.Geospatial.GeospatialScaleGrade
+import util.com.github.d3a.engine.core.RealmConstant
+import com.github.d3a.compute.applicationCapacity.compute.dataComputeUnit.dataService.{DataServiceInvoker, DataSlice, DataSlicePropertyType}
+import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.CoreRealmOperationUtil
 import org.geotools.data.shapefile.ShapefileDataStore
 import org.geotools.data.simple.{SimpleFeatureCollection, SimpleFeatureIterator, SimpleFeatureSource}
 import org.geotools.data.{FileDataStore, FileDataStoreFinder}
@@ -282,7 +282,7 @@ class SpatialDataMaintainUtil {
     dataStore.getSchema.getTypes.forEach( propertyType =>{
       var propertyName = propertyType.getName.toString
       //handle invalid chars and reserved words
-      propertyName = propertyName.replaceAll("△", "Delta_")
+      propertyName = propertyName.replaceAll("�?, "Delta_")
       propertyName = propertyName.replaceAll("OFFSET", "OFFSET_")
       val propertyValueType = propertyType.getBinding.getName
       if(propertyValueType.equals("java.util.Date")){
@@ -334,7 +334,7 @@ class SpatialDataMaintainUtil {
 
     // 要素集合
     val simpleFeatureCollection: SimpleFeatureCollection = simpleFeatureSource.getFeatures
-    // 获取要素迭代器
+    // 获取要素迭代�?
     val featureIterator: SimpleFeatureIterator = simpleFeatureCollection.features
     while ( {
       featureIterator.hasNext
@@ -348,7 +348,7 @@ class SpatialDataMaintainUtil {
       for (property <- propertyList) {
         var propertyName: String = property.getName.toString
         //handle invalid chars and reserved words
-        propertyName = propertyName.replaceAll("△", "Delta_")
+        propertyName = propertyName.replaceAll("�?, "Delta_")
         propertyName = propertyName.replaceAll("OFFSET", "OFFSET_")
         val propertyValue: Any = property.getValue
         if (propertyValue != null && !propertyName.equals("the_geom")) {

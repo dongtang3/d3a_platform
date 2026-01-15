@@ -1,4 +1,4 @@
-package com.github.tgda.dataCollector.eventStreaming.kafka.sender.util;
+package com.github.d3a.dataCollector.eventStreaming.kafka.sender.util;
 
 public class PayloadMetaInfo {
 

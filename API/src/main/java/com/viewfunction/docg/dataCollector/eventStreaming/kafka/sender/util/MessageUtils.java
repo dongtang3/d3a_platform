@@ -1,9 +1,9 @@
-package com.github.tgda.dataCollector.eventStreaming.kafka.sender.util;
+package com.github.d3a.dataCollector.eventStreaming.kafka.sender.util;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 
-import com.github.tgda.dataCollector.eventStreaming.exception.MessageFormatErrorException;
+import com.github.d3a.dataCollector.eventStreaming.exception.MessageFormatErrorException;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericRecord;

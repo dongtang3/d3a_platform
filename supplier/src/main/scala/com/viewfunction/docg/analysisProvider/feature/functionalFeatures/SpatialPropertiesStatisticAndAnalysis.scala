@@ -1,14 +1,14 @@
-package com.github.tgda.supplier.feature.functionalFeatures
+package com.github.d3a.supplier.feature.functionalFeatures
 
-import com.github.tgda.supplier.feature.common.GlobalDataAccessor
-import com.github.tgda.supplier.feature.communication.messagePayload.spatialAnalysis
-import spatialAnalysis.messagePayload.communication.feature.analysisProvider.com.github.tgda.SpatialCommonConfig.PredicateType
-import spatialAnalysis.messagePayload.communication.feature.analysisProvider.com.github.tgda.SpatialPropertiesAggregateStatisticRequest.{CalculationOperator, ObjectAggregationType}
-import spatialAnalysis.messagePayload.communication.feature.analysisProvider.com.github.tgda.SpatialPropertiesAggregateStatisticRequest
-import com.github.tgda.supplier.feature.techImpl.spark.spatial
-import com.github.tgda.supplier.fundamental.spatial.SpatialPredicateType.SpatialPredicateType
-import com.github.tgda.supplier.feature.techImpl.spark.spatial.{SpatialQueryMetaFunction, SpatialQueryParam}
-import com.github.tgda.supplier.fundamental.spatial.SpatialPredicateType
+import com.github.d3a.supplier.feature.common.GlobalDataAccessor
+import com.github.d3a.supplier.feature.communication.messagePayload.spatialAnalysis
+import spatialAnalysis.messagePayload.communication.feature.analysisProvider.com.github.d3a.SpatialCommonConfig.PredicateType
+import spatialAnalysis.messagePayload.communication.feature.analysisProvider.com.github.d3a.SpatialPropertiesAggregateStatisticRequest.{CalculationOperator, ObjectAggregationType}
+import spatialAnalysis.messagePayload.communication.feature.analysisProvider.com.github.d3a.SpatialPropertiesAggregateStatisticRequest
+import com.github.d3a.supplier.feature.techImpl.spark.spatial
+import com.github.d3a.supplier.fundamental.spatial.SpatialPredicateType.SpatialPredicateType
+import com.github.d3a.supplier.feature.techImpl.spark.spatial.{SpatialQueryMetaFunction, SpatialQueryParam}
+import com.github.d3a.supplier.fundamental.spatial.SpatialPredicateType
 import org.apache.spark.sql.{DataFrame, Row}
 import org.apache.spark.sql.functions.{avg, count, max, min, stddev, sum, variance}
 import org.apache.spark.sql.types.{DoubleType, StructField, StructType}
@@ -22,7 +22,7 @@ object SpatialPropertiesStatisticAndAnalysis {
   val spatialValuePropertyName = "CIM_GLGEOMETRYCONTENT"
 
   def executeSpatialPropertiesAggregateStatistic(globalDataAccessor:GlobalDataAccessor,statisticRequest:SpatialPropertiesAggregateStatisticRequest):
-  messagePayload.communication.feature.analysisProvider.com.github.tgda.ResponseDataset = {
+  messagePayload.communication.feature.analysisProvider.com.github.d3a.ResponseDataset = {
     val objectConception = statisticRequest.getObjectConception
     val subjectConception = statisticRequest.getSubjectConception
     val predicateType:PredicateType = statisticRequest.getPredicateType
@@ -76,7 +76,7 @@ object SpatialPropertiesStatisticAndAnalysis {
     val subject_objectSpJoinDF = spatialQueryMetaFunction.spatialJoinQuery(globalDataAccessor,subjectConception_spatialQueryParam,spatialPredicateType,objectConception_spatialQueryParam,subject_objectSpJoinDFName)
     //subject_objectSpJoinDF.printSchema()
 
-    //统计主体空间相关的客体的计算属性的聚合值
+    //统计主体空间相关的客体的计算属性的聚合�?
     var subject_objectAggResultDF:DataFrame = null
     var aggregateColumnName:String = ""
     objectAggregationType match {
@@ -104,11 +104,11 @@ object SpatialPropertiesStatisticAndAnalysis {
         aggregateColumnName = "var_samp("+objectCalculationProperty+")"
     }
 
-    //join 初始主体 df，获取相关属性信息
+    //join 初始主体 df，获取相关属性信�?
     val mergedSubjectStaticResultDF = subject_objectAggResultDF.join(subjectConceptionSpDF,subjectIdentityProperty)
     //mergedSubjectStaticResultDF.printSchema()
 
-    //过滤所需的属性信息
+    //过滤所需的属性信�?
     val propertiesList:ArrayBuffer[String] = ArrayBuffer[String](aggregateColumnName)
     if(subjectCalculationProperty != null){
       propertiesList += subjectCalculationProperty
@@ -119,7 +119,7 @@ object SpatialPropertiesStatisticAndAnalysis {
       })
     }
     val filterResDF = mergedSubjectStaticResultDF.select(subjectIdentityProperty,propertiesList:_*)
-    //执行主体与客体的聚合统计值的数值计算
+    //执行主体与客体的聚合统计值的数值计�?
     if(subjectCalculationProperty != null && calculationOperator!= null && statisticResultProperty != null){
       val calculationDF = filterResDF.select(subjectIdentityProperty,aggregateColumnName,subjectCalculationProperty)
       val calculationResultRDD = calculationDF.rdd.map(row=>{
@@ -151,7 +151,7 @@ object SpatialPropertiesStatisticAndAnalysis {
     }
   }
 
-  def generateResultDataSet(dataStructure:StructType,dataRowArray:Array[Row]): messagePayload.communication.feature.analysisProvider.com.github.tgda.ResponseDataset = {
+  def generateResultDataSet(dataStructure:StructType,dataRowArray:Array[Row]): messagePayload.communication.feature.analysisProvider.com.github.d3a.ResponseDataset = {
     val structureFields = dataStructure.fields
     val propertiesInfo = new java.util.HashMap[String,String]
     structureFields.foreach(item =>{
@@ -167,6 +167,6 @@ object SpatialPropertiesStatisticAndAnalysis {
       })
     })
 
-    new messagePayload.communication.feature.analysisProvider.com.github.tgda.ResponseDataset(propertiesInfo,dataList)
+    new messagePayload.communication.feature.analysisProvider.com.github.d3a.ResponseDataset(propertiesInfo,dataList)
   }
 }

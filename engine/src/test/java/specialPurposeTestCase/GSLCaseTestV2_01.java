@@ -1,15 +1,15 @@
 package specialPurposeTestCase;
 
-import com.github.tgda.engine.core.analysis.query.QueryParameters;
-import com.github.tgda.engine.core.analysis.query.filteringItem.EqualFilteringItem;
-import com.github.tgda.engine.core.analysis.query.filteringItem.NullValueFilteringItem;
-import com.github.tgda.engine.core.analysis.query.filteringItem.SimilarFilteringItem;
-import com.github.tgda.engine.core.exception.EngineServiceEntityExploreException;
-import com.github.tgda.engine.core.exception.EngineServiceRuntimeException;
-import com.github.tgda.engine.core.internal.neo4j.util.BatchDataOperationUtil;
-import com.github.tgda.coreRealm.realmServiceCore.payload.*;
-import com.github.tgda.coreRealm.realmServiceCore.term.*;
-import com.github.tgda.engine.core.util.factory.EngineFactory;
+import com.github.d3a.engine.core.analysis.query.QueryParameters;
+import com.github.d3a.engine.core.analysis.query.filteringItem.EqualFilteringItem;
+import com.github.d3a.engine.core.analysis.query.filteringItem.NullValueFilteringItem;
+import com.github.d3a.engine.core.analysis.query.filteringItem.SimilarFilteringItem;
+import com.github.d3a.engine.core.exception.EngineServiceEntityExploreException;
+import com.github.d3a.engine.core.exception.EngineServiceRuntimeException;
+import com.github.d3a.engine.core.internal.neo4j.util.BatchDataOperationUtil;
+import com.github.d3a.coreRealm.realmServiceCore.payload.*;
+import com.github.d3a.coreRealm.realmServiceCore.term.*;
+import com.github.d3a.engine.core.util.factory.EngineFactory;
 
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -58,21 +58,21 @@ public class GSLCaseTestV2_01 {
     private static void createConceptionKind(){
         CoreRealm coreRealm = EngineFactory.getDefaultEngine();
         /* Define ConceptionKind */
-        coreRealm.createConceptionKind("FederationOfIndustryAndCommerce","工商联");
-        coreRealm.createConceptionKind("FIC_HistoricalChangeTerm","工商联历史界次");
+        coreRealm.createConceptionKind("FederationOfIndustryAndCommerce","工商�?);
+        coreRealm.createConceptionKind("FIC_HistoricalChangeTerm","工商联历史界�?);
         coreRealm.createConceptionKind("ChamberOfCommerce","商会");
         coreRealm.createConceptionKind("EnterpriseMember","企业会员");
         coreRealm.createConceptionKind("IndividualMember","个人会员");
         coreRealm.createConceptionKind("GroupMember","团体会员");
-        coreRealm.createConceptionKind("Executive","执常委");
-        coreRealm.createConceptionKind("ExecutiveCommonDuty","执常委职务");
-        coreRealm.createConceptionKind("ExecutiveEnterprise","执常委相关企业");
+        coreRealm.createConceptionKind("Executive","执常�?);
+        coreRealm.createConceptionKind("ExecutiveCommonDuty","执常委职�?);
+        coreRealm.createConceptionKind("ExecutiveEnterprise","执常委相关企�?);
         coreRealm.createConceptionKind("ExecutiveFicElseDuty","执常委工商联职务");
-        coreRealm.createConceptionKind("ExecutiveHonor","执常委荣誉");
+        coreRealm.createConceptionKind("ExecutiveHonor","执常委荣�?);
         coreRealm.createConceptionKind("ChamberOfCommerceLeader","商会领导");
         coreRealm.createConceptionKind("ChamberOfCommerceLeaderDuty","商会领导职务");
-        coreRealm.createConceptionKind("FICLeader","工商联领导");
-        coreRealm.createConceptionKind("FICLeaderSocialDuty","工商联领导社会职务");
+        coreRealm.createConceptionKind("FICLeader","工商联领�?);
+        coreRealm.createConceptionKind("FICLeaderSocialDuty","工商联领导社会职�?);
     }
 
     private static void loadCSVEntities(String headerFileLocation){
@@ -161,7 +161,7 @@ public class GSLCaseTestV2_01 {
         queryParameters.setResultNumber(10000000);
         QueryParameters queryParameters2 = new QueryParameters();
         queryParameters2.setResultNumber(10000000);
-        queryParameters2.setDefaultFilteringItem(new EqualFilteringItem("MEMBER_ORG_FIRM","工商联直属会员"));
+        queryParameters2.setDefaultFilteringItem(new EqualFilteringItem("MEMBER_ORG_FIRM","工商联直属会�?));
         Map<String,Object> operationResult =null;
         /*Link EnterpriseMember and FederationOfIndustryAndCommerce*/
         operationResult = BatchDataOperationUtil.batchAttachNewRelationsWithSinglePropertyValueMatch(
@@ -191,7 +191,7 @@ public class GSLCaseTestV2_01 {
         queryParameters.setResultNumber(10000000);
         QueryParameters queryParameters2 = new QueryParameters();
         queryParameters2.setResultNumber(10000000);
-        queryParameters2.setDefaultFilteringItem(new EqualFilteringItem("MEMBER_ORG_FIRM","所属商会会员"));
+        queryParameters2.setDefaultFilteringItem(new EqualFilteringItem("MEMBER_ORG_FIRM","所属商会会�?));
         Map<String,Object> operationResult =null;
         /*Link EnterpriseMember and ChamberOfCommerce*/
         operationResult = BatchDataOperationUtil.batchAttachNewRelationsWithSinglePropertyValueMatch(
@@ -304,7 +304,7 @@ public class GSLCaseTestV2_01 {
         coreRealm.openGlobalSession();
         ConceptionKind conceptionKind = coreRealm.getConceptionKind("Executive");
         QueryParameters queryParameters = new QueryParameters();
-        queryParameters.setDefaultFilteringItem(new SimilarFilteringItem("CERTIFICATE_NO","，", SimilarFilteringItem.MatchingType.EndWith));
+        queryParameters.setDefaultFilteringItem(new SimilarFilteringItem("CERTIFICATE_NO","�?, SimilarFilteringItem.MatchingType.EndWith));
         queryParameters.setResultNumber(10000000);
 
         ConceptionEntitiesRetrieveResult conceptionEntitiesRetrieveResult = conceptionKind.getEntities(queryParameters);
@@ -314,8 +314,8 @@ public class GSLCaseTestV2_01 {
             AttributeValue idNOAttributeValue = currentEntity.getAttribute("CERTIFICATE_NO");
             if(idNOAttributeValue!=null){
                 String currentIDValue = idNOAttributeValue.getAttributeValue().toString();
-                if(currentIDValue.endsWith("，")){
-                    currentEntity.updateAttribute("CERTIFICATE_NO",currentIDValue.replaceAll("，",""));
+                if(currentIDValue.endsWith("�?)){
+                    currentEntity.updateAttribute("CERTIFICATE_NO",currentIDValue.replaceAll("�?,""));
                 }
             }
         }
@@ -418,23 +418,23 @@ public class GSLCaseTestV2_01 {
         Map<String,Object> attrMap = new HashMap<>();
         CoreRealm coreRealm = EngineFactory.getDefaultEngine();
         /*
-        RelationKind targetRelationKind = coreRealm.createRelationKind("BelongsToChamberOfCommerce","隶属于商会");
-        attrMap.put("DISPLAY_PROP","隶属于商会");
+        RelationKind targetRelationKind = coreRealm.createRelationKind("BelongsToChamberOfCommerce","隶属于商�?);
+        attrMap.put("DISPLAY_PROP","隶属于商�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
         targetRelationKind = coreRealm.createRelationKind("BelongsToFederationOfIndustryAndCommerce","隶属于工商联");
         attrMap.put("DISPLAY_PROP","隶属于工商联");
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
-        targetRelationKind = coreRealm.createRelationKind("HasExecutiveCommonDuty","拥有的职务");
-        attrMap.put("DISPLAY_PROP","拥有的职务");
+        targetRelationKind = coreRealm.createRelationKind("HasExecutiveCommonDuty","拥有的职�?);
+        attrMap.put("DISPLAY_PROP","拥有的职�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
-        targetRelationKind = coreRealm.createRelationKind("HasFicElseDuty","拥有的职务");
-        attrMap.put("DISPLAY_PROP","拥有的职务");
+        targetRelationKind = coreRealm.createRelationKind("HasFicElseDuty","拥有的职�?);
+        attrMap.put("DISPLAY_PROP","拥有的职�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
-        targetRelationKind = coreRealm.createRelationKind("ExecutiveOfFederationOfIndustryAndCommerce","工商联常务理事");
-        attrMap.put("DISPLAY_PROP","工商联常务理事");
+        targetRelationKind = coreRealm.createRelationKind("ExecutiveOfFederationOfIndustryAndCommerce","工商联常务理�?);
+        attrMap.put("DISPLAY_PROP","工商联常务理�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
-        targetRelationKind = coreRealm.createRelationKind("HasHonor","获得的荣誉");
-        attrMap.put("DISPLAY_PROP","获得的荣誉");
+        targetRelationKind = coreRealm.createRelationKind("HasHonor","获得的荣�?);
+        attrMap.put("DISPLAY_PROP","获得的荣�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
         targetRelationKind = coreRealm.createRelationKind("IsSameEnterprise","同家企业");
         attrMap.put("DISPLAY_PROP","同家企业");
@@ -442,31 +442,31 @@ public class GSLCaseTestV2_01 {
         targetRelationKind = coreRealm.createRelationKind("IsSamePerson","同一个人");
         attrMap.put("DISPLAY_PROP","同一个人");
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
-        targetRelationKind = coreRealm.createRelationKind("ParentFederationOfIndustryAndCommerceIs","上级工商联");
-        attrMap.put("DISPLAY_PROP","上级工商联");
+        targetRelationKind = coreRealm.createRelationKind("ParentFederationOfIndustryAndCommerceIs","上级工商�?);
+        attrMap.put("DISPLAY_PROP","上级工商�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
         targetRelationKind = coreRealm.createRelationKind("RelatedToExecutiveEnterprise","相关企业");
         attrMap.put("DISPLAY_PROP","相关企业");
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
-        targetRelationKind = coreRealm.createRelationKind("HistoricalChangeTermOfFIC","工商联历年界次");
-        attrMap.put("DISPLAY_PROP","工商联历史换届");
+        targetRelationKind = coreRealm.createRelationKind("HistoricalChangeTermOfFIC","工商联历年界�?);
+        attrMap.put("DISPLAY_PROP","工商联历史换�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
         targetRelationKind = coreRealm.createRelationKind("LeaderOfChamberOfCommerce","商会领导");
         attrMap.put("DISPLAY_PROP","商会领导");
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
-        targetRelationKind = coreRealm.createRelationKind("HasLeaderCommonDuty","拥有的职务");
-        attrMap.put("DISPLAY_PROP","拥有的职务");
+        targetRelationKind = coreRealm.createRelationKind("HasLeaderCommonDuty","拥有的职�?);
+        attrMap.put("DISPLAY_PROP","拥有的职�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
 */
 
 
 
 
-        RelationKind    targetRelationKind = coreRealm.createRelationKind("LeaderOfFIC","工商联领导");
-        attrMap.put("DISPLAY_PROP","工商联领导");
+        RelationKind    targetRelationKind = coreRealm.createRelationKind("LeaderOfFIC","工商联领�?);
+        attrMap.put("DISPLAY_PROP","工商联领�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
-        targetRelationKind = coreRealm.createRelationKind("HasLeaderSocialDuty","拥有的职务");
-        attrMap.put("DISPLAY_PROP","拥有的职务");
+        targetRelationKind = coreRealm.createRelationKind("HasLeaderSocialDuty","拥有的职�?);
+        attrMap.put("DISPLAY_PROP","拥有的职�?);
         System.out.println(targetRelationKind.setKindScopeAttributes(attrMap));
     }
 
@@ -548,7 +548,7 @@ public class GSLCaseTestV2_01 {
         attributesNameList.add(provinceProperty);
         attributesNameList.add(cityProperty);
         attributesNameList.add(countyProperty);
-        attributesNameList.add(levelProperty);// 地市级 区县级 省级 全国
+        attributesNameList.add(levelProperty);// 地市�?区县�?省级 全国
 
         ConceptionEntitiesAttributesRetrieveResult conceptionEntitiesAttributesRetrieveResult = conceptionKind.getSingleValueEntityAttributesByAttributeNames(attributesNameList,queryParameters);
         List<EntityValue> conceptionEntityValueList = conceptionEntitiesAttributesRetrieveResult.getEntityValues();
@@ -559,9 +559,9 @@ public class GSLCaseTestV2_01 {
         for(EntityValue conceptionEntityValue:conceptionEntityValueList){
             Map<String,Object> attributesMap = conceptionEntityValue.getEntityAttributesValue();
             String _ADMINI_LEVEL = attributesMap.get(levelProperty).toString();
-            if(_ADMINI_LEVEL.trim().equals("区县级")){
+            if(_ADMINI_LEVEL.trim().equals("区县�?)){
                 if(attributesMap.containsKey(countyProperty)){
-                    String cityName = "市辖区";
+                    String cityName = "市辖�?;
                     if(attributesMap.containsKey(cityProperty)){
                         cityName = attributesMap.get(cityProperty).toString();
                     }
@@ -569,8 +569,8 @@ public class GSLCaseTestV2_01 {
                     String geoName = attributesMap.get(provinceProperty).toString()+"-"+cityName+"-"+attributesMap.get(countyProperty).toString();
                     _XIANDataMap.put(conceptionEntityValue.getEntityUID(),geoName);}
             }
-            if(_ADMINI_LEVEL.trim().equals("地市级")){
-                String cityName = "市辖区";
+            if(_ADMINI_LEVEL.trim().equals("地市�?)){
+                String cityName = "市辖�?;
                 if(attributesMap.containsKey(cityProperty)){
                     cityName = attributesMap.get(cityProperty).toString();
                 }
@@ -698,7 +698,7 @@ public class GSLCaseTestV2_01 {
 
         /*
         PARTY_MEMBER_NUM	0
-PARTY_ORG_FORM	联合党组织
+PARTY_ORG_FORM	联合党组�?
 PARTY_ORG_FORM_CODE	DZZXS-02
 PARTY_SECRETARY
          */
@@ -722,10 +722,10 @@ PARTY_SECRETARY
                 if(sourceMap.containsKey("PARTY_ORG_FORM_CODE")){
                     String _PARTY_ORGANIZATIO_FORM = sourceMap.get("PARTY_ORG_FORM_CODE").toString();
                     if(_PARTY_ORGANIZATIO_FORM.equals("DZZXS-01")){
-                        sourceMap.put("CPC_Organization_Form","独立党组织");
+                        sourceMap.put("CPC_Organization_Form","独立党组�?);
                     }
                     if(_PARTY_ORGANIZATIO_FORM.equals("DZZXS-02")){
-                        sourceMap.put("CPC_Organization_Form","联合党组织");
+                        sourceMap.put("CPC_Organization_Form","联合党组�?);
                     }
                 }
                 _EntityDataMap.putAll(sourceMap);

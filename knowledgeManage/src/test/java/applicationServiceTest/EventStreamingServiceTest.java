@@ -1,8 +1,8 @@
 package applicationServiceTest;
 
-import com.github.tgda.engine.core.payload.EntityValue;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.EventStreamingService;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.sender.MessageSentEventHandler;
+import com.github.d3a.engine.core.payload.EntityValue;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.EventStreamingService;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.sender.MessageSentEventHandler;
 
 import java.util.*;
 

@@ -1,12 +1,12 @@
 package applicationServiceTest;
 
-import com.github.tgda.engine.core.payload.EntityValue;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.payload.EntityValueOperationContent;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.payload.EntityValueOperationPayload;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.receiver.EntityValueOperationsMessageHandler;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.receiver.EntityValueOperationsMessageReceiver;
+import com.github.d3a.engine.core.payload.EntityValue;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.payload.EntityValueOperationContent;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.payload.EntityValueOperationPayload;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.receiver.EntityValueOperationsMessageHandler;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.receiver.EntityValueOperationsMessageReceiver;
 
 import java.util.List;
 

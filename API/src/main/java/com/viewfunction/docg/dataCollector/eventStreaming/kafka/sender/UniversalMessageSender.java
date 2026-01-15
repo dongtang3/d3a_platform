@@ -1,8 +1,8 @@
-package com.github.tgda.dataCollector.eventStreaming.kafka.sender;
+package com.github.d3a.dataCollector.eventStreaming.kafka.sender;
 
-import com.github.tgda.dataCollector.eventStreaming.exception.ConfigurationErrorException;
-import com.github.tgda.dataCollector.eventStreaming.exception.MessageHandleErrorException;
-import com.github.tgda.dataCollector.eventStreaming.kafka.sender.util.EventStreamingServicePropertiesHandler;
+import com.github.d3a.dataCollector.eventStreaming.exception.ConfigurationErrorException;
+import com.github.d3a.dataCollector.eventStreaming.exception.MessageHandleErrorException;
+import com.github.d3a.dataCollector.eventStreaming.kafka.sender.util.EventStreamingServicePropertiesHandler;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;

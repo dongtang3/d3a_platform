@@ -1,7 +1,7 @@
 package globalDataAccessorTest
 
-import com.github.tgda.supplier.feature.common.GlobalDataAccessor
-import com.github.tgda.supplier.providerApplication.AnalysisProviderApplicationUtil
+import com.github.d3a.supplier.feature.common.GlobalDataAccessor
+import com.github.d3a.supplier.providerApplication.AnalysisProviderApplicationUtil
 
 object GlobalDataAccessorTestCase01 extends App{
 

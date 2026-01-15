@@ -1,6 +1,6 @@
-package com.github.tgda.dataCollector.eventStreaming.kafka.sender.util;
+package com.github.d3a.dataCollector.eventStreaming.kafka.sender.util;
 
-import com.github.tgda.dataCollector.eventStreaming.exception.ConfigurationErrorException;
+import com.github.d3a.dataCollector.eventStreaming.exception.ConfigurationErrorException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

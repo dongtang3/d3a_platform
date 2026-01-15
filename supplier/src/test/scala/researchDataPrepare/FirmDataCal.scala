@@ -1,16 +1,16 @@
 package researchDataPrepare
 
-import com.github.tgda.supplier.feature.common.GlobalDataAccessor
-import messagePayload.communication.feature.analysisProvider.com.github.tgda.ResponseDataset
-import com.github.tgda.supplier.feature.functionalFeatures.AdministrativeDivisionBasedSpatialAnalysis
-import com.github.tgda.supplier.feature.techImpl.spark.spatial
-import com.github.tgda.supplier.feature.techImpl.spark.spatial.SpatialQueryMetaFunction
-import com.github.tgda.supplier.fundamental.dataMaintenance.SpatialDataMaintainUtil
-import com.github.tgda.supplier.fundamental.spatial.{GeospatialScaleLevel, SpatialAnalysisConstant, SpatialPredicateType}
-import com.github.tgda.supplier.providerApplication.AnalysisProviderApplicationUtil
-import term.com.github.tgda.engine.core.Geospatial.GeospatialScaleGrade
-import util.com.github.tgda.engine.core.RealmConstant
-import com.github.tgda.compute.applicationCapacity.compute.dataComputeUnit.dataService.{DataServiceInvoker, DataSlicePropertyType}
+import com.github.d3a.supplier.feature.common.GlobalDataAccessor
+import messagePayload.communication.feature.analysisProvider.com.github.d3a.ResponseDataset
+import com.github.d3a.supplier.feature.functionalFeatures.AdministrativeDivisionBasedSpatialAnalysis
+import com.github.d3a.supplier.feature.techImpl.spark.spatial
+import com.github.d3a.supplier.feature.techImpl.spark.spatial.SpatialQueryMetaFunction
+import com.github.d3a.supplier.fundamental.dataMaintenance.SpatialDataMaintainUtil
+import com.github.d3a.supplier.fundamental.spatial.{GeospatialScaleLevel, SpatialAnalysisConstant, SpatialPredicateType}
+import com.github.d3a.supplier.providerApplication.AnalysisProviderApplicationUtil
+import term.com.github.d3a.engine.core.Geospatial.GeospatialScaleGrade
+import util.com.github.d3a.engine.core.RealmConstant
+import com.github.d3a.compute.applicationCapacity.compute.dataComputeUnit.dataService.{DataServiceInvoker, DataSlicePropertyType}
 
 import java.util
 import scala.collection.mutable
@@ -60,7 +60,7 @@ object FirmDataCal extends App{
       globalDataAccessor,null,"firmData","defaultGroup",
       mutable.Buffer[String]("name"),
       SpatialPredicateType.Within,
-      com.github.tgda.supplier.fundamental.spatial.GeospatialScaleGrade.COUNTY,
+      com.github.d3a.supplier.fundamental.spatial.GeospatialScaleGrade.COUNTY,
       mutable.Buffer[String]("TGDA_GEOSPATIALCODE","TGDA_GEOSPATIALCHINESENAME"),
       GeospatialScaleLevel.CountryLevel,0.0001
     )

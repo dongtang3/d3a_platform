@@ -1,10 +1,10 @@
 package example
 
-import com.github.tgda.dataAnalyze.util.coreRealm.GeospatialScaleLevel
-import com.github.tgda.dataAnalyze.util.dataSlice.DataSliceOperationUtil
-import com.github.tgda.dataAnalyze.util.spark.DataSliceSparkAccessor
-import com.github.tgda.dataAnalyze.util.spark.spatial.{SpatialPredicateType, SpatialQueryOperator, SpatialQueryParam}
-import com.github.tgda.dataAnalyze.util.spark.util.DataOutputUtil
+import com.github.d3a.dataAnalyze.util.coreRealm.GeospatialScaleLevel
+import com.github.d3a.dataAnalyze.util.dataSlice.DataSliceOperationUtil
+import com.github.d3a.dataAnalyze.util.spark.DataSliceSparkAccessor
+import com.github.d3a.dataAnalyze.util.spark.spatial.{SpatialPredicateType, SpatialQueryOperator, SpatialQueryParam}
+import com.github.d3a.dataAnalyze.util.spark.util.DataOutputUtil
 import org.apache.spark.sql.{Row, SaveMode}
 import org.apache.spark.sql.functions.{avg, stddev, sum,count}
 import org.apache.spark.sql.types.{DoubleType, IntegerType, StringType, StructField, StructType}

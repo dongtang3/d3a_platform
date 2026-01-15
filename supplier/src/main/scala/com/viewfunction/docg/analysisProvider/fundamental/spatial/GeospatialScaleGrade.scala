@@ -1,4 +1,4 @@
-package com.github.tgda.supplier.fundamental.spatial
+package com.github.d3a.supplier.fundamental.spatial
 
 object GeospatialScaleGrade extends Enumeration{
   type GeospatialScaleGrade = Value

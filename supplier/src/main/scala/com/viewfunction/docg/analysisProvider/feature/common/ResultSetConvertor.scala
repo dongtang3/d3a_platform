@@ -1,4 +1,4 @@
-package com.github.tgda.supplier.feature.common
+package com.github.d3a.supplier.feature.common
 
 import java.sql.ResultSet
 

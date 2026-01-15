@@ -1,6 +1,6 @@
 package example
 
-import com.github.tgda.dataAnalyze.util.dataSlice.DataSliceOperationUtil
+import com.github.d3a.dataAnalyze.util.dataSlice.DataSliceOperationUtil
 import org.apache.ignite.Ignition
 import org.apache.ignite.spark.IgniteDataFrameSettings.{FORMAT_IGNITE, OPTION_CONFIG_FILE, OPTION_TABLE}
 import org.apache.sedona.sql.utils.SedonaSQLRegistrator
@@ -46,7 +46,7 @@ object GeoDataExample extends App{
     println("Data frame content:")
     igniteDF.show(100)
 
-    val df = igniteSession.sql("SELECT * FROM IndividualTree WHERE SZ = '蓝花楹'")
+    val df = igniteSession.sql("SELECT * FROM IndividualTree WHERE SZ = '蓝花�?")
     df.createOrReplaceTempView("IndividualTree_part")
     df.printSchema()
     println("Result content:")

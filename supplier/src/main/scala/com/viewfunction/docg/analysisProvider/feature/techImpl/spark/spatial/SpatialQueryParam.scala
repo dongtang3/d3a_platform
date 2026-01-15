@@ -1,4 +1,4 @@
-package com.github.tgda.supplier.feature.techImpl.spark.spatial
+package com.github.d3a.supplier.feature.techImpl.spark.spatial
 
 import scala.collection.mutable
 

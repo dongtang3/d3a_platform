@@ -1,16 +1,16 @@
 package analysisExample
 
-import com.github.tgda.supplier.feature.common.GlobalDataAccessor
-import com.github.tgda.supplier.feature.techImpl.spark.spatial
-import com.github.tgda.supplier.feature.techImpl.spark.spatial.{SpatialQueryMetaFunction, SpatialQueryParam}
-import com.github.tgda.supplier.fundamental.spatial.{GeospatialScaleLevel, SpatialPredicateType}
-import com.github.tgda.supplier.providerApplication.AnalysisProviderApplicationUtil
-import util.neo4j.internal.com.github.tgda.engine.core.BatchDataOperationUtil
-import payload.com.github.tgda.engine.core.RelationshipEntityValue
-import util.com.github.tgda.engine.core.RealmConstant
-import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.DataSlicePropertyType
-import result.dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.DataSliceOperationResult
-import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.CoreRealmOperationUtil
+import com.github.d3a.supplier.feature.common.GlobalDataAccessor
+import com.github.d3a.supplier.feature.techImpl.spark.spatial
+import com.github.d3a.supplier.feature.techImpl.spark.spatial.{SpatialQueryMetaFunction, SpatialQueryParam}
+import com.github.d3a.supplier.fundamental.spatial.{GeospatialScaleLevel, SpatialPredicateType}
+import com.github.d3a.supplier.providerApplication.AnalysisProviderApplicationUtil
+import util.neo4j.internal.com.github.d3a.engine.core.BatchDataOperationUtil
+import payload.com.github.d3a.engine.core.RelationshipEntityValue
+import util.com.github.d3a.engine.core.RealmConstant
+import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.DataSlicePropertyType
+import result.dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.DataSliceOperationResult
+import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.CoreRealmOperationUtil
 import org.apache.spark.sql.Row
 
 import java.util

@@ -1,17 +1,17 @@
 package specialPurposeTestCase;
 
-import com.github.tgda.engine.core.payload.EntityValue;
-import com.github.tgda.engine.core.payload.RelationshipEntityValue;
-import com.github.tgda.engine.core.term.Entity;
+import com.github.d3a.engine.core.payload.EntityValue;
+import com.github.d3a.engine.core.payload.RelationshipEntityValue;
+import com.github.d3a.engine.core.term.Entity;
 import com.google.common.collect.Lists;
-import com.github.tgda.engine.core.analysis.query.QueryParameters;
-import com.github.tgda.engine.core.exception.EngineServiceEntityExploreException;
-import com.github.tgda.engine.core.exception.EngineServiceRuntimeException;
-import com.github.tgda.engine.core.internal.neo4j.util.BatchDataOperationUtil;
-import com.github.tgda.engine.core.payload.EntitiesRetrieveResult;
-import com.github.tgda.engine.core.term.Type;
-import com.github.tgda.engine.core.term.Engine;
-import com.github.tgda.engine.core.util.factory.EngineFactory;
+import com.github.d3a.engine.core.analysis.query.QueryParameters;
+import com.github.d3a.engine.core.exception.EngineServiceEntityExploreException;
+import com.github.d3a.engine.core.exception.EngineServiceRuntimeException;
+import com.github.d3a.engine.core.internal.neo4j.util.BatchDataOperationUtil;
+import com.github.d3a.engine.core.payload.EntitiesRetrieveResult;
+import com.github.d3a.engine.core.term.Type;
+import com.github.d3a.engine.core.term.Engine;
+import com.github.d3a.engine.core.util.factory.EngineFactory;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

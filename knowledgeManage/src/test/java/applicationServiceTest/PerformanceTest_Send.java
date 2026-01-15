@@ -1,10 +1,10 @@
 package applicationServiceTest;
 
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageFormatErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.sender.MessageSentEventHandler;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.sender.UniversalMessageSender;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageFormatErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.sender.MessageSentEventHandler;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.sender.UniversalMessageSender;
 
 import java.util.UUID;
 

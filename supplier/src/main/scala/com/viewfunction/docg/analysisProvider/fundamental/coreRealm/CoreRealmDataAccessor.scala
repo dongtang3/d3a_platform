@@ -1,9 +1,9 @@
-package com.github.tgda.supplier.fundamental.coreRealm
+package com.github.d3a.supplier.fundamental.coreRealm
 
-import query.analysis.com.github.tgda.engine.core.QueryParameters
-import com.github.tgda.coreRealm.realmServiceCore.payload._
-import com.github.tgda.coreRealm.realmServiceCore.term._
-import factory.util.com.github.tgda.engine.core.RealmTermFactory
+import query.analysis.com.github.d3a.engine.core.QueryParameters
+import com.github.d3a.coreRealm.realmServiceCore.payload._
+import com.github.d3a.coreRealm.realmServiceCore.term._
+import factory.util.com.github.d3a.engine.core.RealmTermFactory
 
 import scala.collection.JavaConverters._
 import scala.collection.mutable

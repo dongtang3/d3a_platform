@@ -1,4 +1,4 @@
-package com.github.tgda.supplier.providerApplication.communication
+package com.github.d3a.supplier.providerApplication.communication
 
 import akka.actor.ActorRef
 

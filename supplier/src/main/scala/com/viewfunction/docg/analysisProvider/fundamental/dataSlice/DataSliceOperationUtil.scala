@@ -1,11 +1,11 @@
-package com.github.tgda.supplier.fundamental.dataSlice
+package com.github.d3a.supplier.fundamental.dataSlice
 
-import messagePayload.communication.feature.analysisProvider.com.github.tgda.ResponseDataset
-import com.github.tgda.supplier.fundamental.dataSlice.ResponseDataSourceTech.ResponseDataSourceTech
-import com.github.tgda.supplier.providerApplication.AnalysisProviderApplicationUtil
-import result.dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.DataSliceOperationResult
-import com.github.tgda.compute.applicationCapacity.compute.dataComputeUnit.dataService.{DataServiceInvoker, DataSlice, DataSlicePropertyType}
-import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.MassDataOperationUtil
+import messagePayload.communication.feature.analysisProvider.com.github.d3a.ResponseDataset
+import com.github.d3a.supplier.fundamental.dataSlice.ResponseDataSourceTech.ResponseDataSourceTech
+import com.github.d3a.supplier.providerApplication.AnalysisProviderApplicationUtil
+import result.dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.DataSliceOperationResult
+import com.github.d3a.compute.applicationCapacity.compute.dataComputeUnit.dataService.{DataServiceInvoker, DataSlice, DataSlicePropertyType}
+import util.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.MassDataOperationUtil
 import org.apache.spark.sql.types.DataTypes
 
 import java.util

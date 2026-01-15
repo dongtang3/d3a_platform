@@ -1,10 +1,10 @@
 package specialPurposeTestCase;
 
-import com.github.tgda.engine.core.exception.EngineServiceRuntimeException;
-import com.github.tgda.engine.core.term.Engine;
-import com.github.tgda.engine.core.term.Geospatial;
-import com.github.tgda.engine.core.term.TimeFlow;
-import com.github.tgda.engine.core.util.factory.EngineFactory;
+import com.github.d3a.engine.core.exception.EngineServiceRuntimeException;
+import com.github.d3a.engine.core.term.Engine;
+import com.github.d3a.engine.core.term.Geospatial;
+import com.github.d3a.engine.core.term.TimeFlow;
+import com.github.d3a.engine.core.util.factory.EngineFactory;
 
 public class SystemInitTest {
 

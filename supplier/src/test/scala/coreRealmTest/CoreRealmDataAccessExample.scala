@@ -1,9 +1,9 @@
 package coreRealmTest
 
-import com.github.tgda.supplier.fundamental.coreRealm.{EntityHandler, CoreRealmDataAccessor}
-import query.analysis.com.github.tgda.engine.core.QueryParameters
-import com.github.tgda.coreRealm.realmServiceCore.payload.{EntityValue, EntitiesRetrieveStatistics, RelationshipEntityValue}
-import com.github.tgda.coreRealm.realmServiceCore.term.{Entity, RelationshipEntity}
+import com.github.d3a.supplier.fundamental.coreRealm.{EntityHandler, CoreRealmDataAccessor}
+import query.analysis.com.github.d3a.engine.core.QueryParameters
+import com.github.d3a.coreRealm.realmServiceCore.payload.{EntityValue, EntitiesRetrieveStatistics, RelationshipEntityValue}
+import com.github.d3a.coreRealm.realmServiceCore.term.{Entity, RelationshipEntity}
 
 import scala.collection.mutable
 

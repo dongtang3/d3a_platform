@@ -1,6 +1,6 @@
-package com.github.tgda.supplier.fundamental.dataMaintenance
+package com.github.d3a.supplier.fundamental.dataMaintenance
 
-import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.tgda.DataSlicePropertyType
+import dataService.dataComputeUnit.dataCompute.applicationCapacity.dataCompute.com.github.d3a.DataSlicePropertyType
 
 import java.util
 

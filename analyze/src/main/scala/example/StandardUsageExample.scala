@@ -1,8 +1,8 @@
 package example
 
-import com.github.tgda.dataAnalyze.util.dataSlice.DataSliceOperationUtil
-import com.github.tgda.dataAnalyze.util.spark.DataSliceSparkAccessor
-import com.github.tgda.dataAnalyze.util.spark.spatial.{SpatialPredicateType, SpatialQueryOperator, SpatialQueryParam}
+import com.github.d3a.dataAnalyze.util.dataSlice.DataSliceOperationUtil
+import com.github.d3a.dataAnalyze.util.spark.DataSliceSparkAccessor
+import com.github.d3a.dataAnalyze.util.spark.spatial.{SpatialPredicateType, SpatialQueryOperator, SpatialQueryParam}
 
 import scala.collection.mutable
 
@@ -17,7 +17,7 @@ object StandardUsageExample extends App{
     individualTreeDF.show(10)
     individualTreeDF.printSchema()
 
-    val customDf = dataSliceSparkAccessor.getSparkSession().sql("SELECT * FROM IndividualTree WHERE SZ = '蓝花楹'")
+    val customDf = dataSliceSparkAccessor.getSparkSession().sql("SELECT * FROM IndividualTree WHERE SZ = '蓝花�?")
     customDf.createOrReplaceTempView("IndividualTree_FilterA")
     customDf.printSchema()
     customDf.show(10)

@@ -2,13 +2,13 @@ package applicationServiceTest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageFormatErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.exception.SchemaFormatErrorException;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.sender.AvroMessageSender;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.sender.MessageSentEventHandler;
-import com.github.tgda.knowledgeManage.applicationService.eventStreaming.kafka.utils.PayloadMetaInfo;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.ConfigurationErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageFormatErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.MessageHandleErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.exception.SchemaFormatErrorException;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.sender.AvroMessageSender;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.sender.MessageSentEventHandler;
+import com.github.d3a.knowledgeManage.applicationService.eventStreaming.kafka.utils.PayloadMetaInfo;
 
 public class AvroMessageSenderTest {
 

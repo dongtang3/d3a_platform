@@ -1,15 +1,15 @@
 package providerClientTest;
 
-import com.github.tgda.supplier.client.AnalysisProviderClient;
-import com.github.tgda.supplier.client.exception.AnalyseRequestFormatException;
-import com.github.tgda.supplier.client.exception.AnalysisEngineRuntimeException;
-import com.github.tgda.supplier.client.exception.ProviderClientInitException;
-import com.github.tgda.supplier.feature.communication.AnalyseResponseCallback;
-import com.github.tgda.supplier.feature.communication.messagePayload.AnalyseRequest;
-import com.github.tgda.supplier.feature.communication.messagePayload.AnalyseResponse;
-import com.github.tgda.supplier.feature.communication.messagePayload.ResponseDataset;
-import com.github.tgda.supplier.feature.communication.messagePayload.spatialAnalysis.AdministrativeDivisionSpatialCalculateRequest;
-import com.github.tgda.supplier.feature.communication.messagePayload.spatialAnalysis.SpatialCommonConfig;
+import com.github.d3a.supplier.client.AnalysisProviderClient;
+import com.github.d3a.supplier.client.exception.AnalyseRequestFormatException;
+import com.github.d3a.supplier.client.exception.AnalysisEngineRuntimeException;
+import com.github.d3a.supplier.client.exception.ProviderClientInitException;
+import com.github.d3a.supplier.feature.communication.AnalyseResponseCallback;
+import com.github.d3a.supplier.feature.communication.messagePayload.AnalyseRequest;
+import com.github.d3a.supplier.feature.communication.messagePayload.AnalyseResponse;
+import com.github.d3a.supplier.feature.communication.messagePayload.ResponseDataset;
+import com.github.d3a.supplier.feature.communication.messagePayload.spatialAnalysis.AdministrativeDivisionSpatialCalculateRequest;
+import com.github.d3a.supplier.feature.communication.messagePayload.spatialAnalysis.SpatialCommonConfig;
 
 import java.util.ArrayList;
 import java.util.Date;
