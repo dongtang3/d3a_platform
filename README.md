@@ -1,119 +1,135 @@
+# D3A - Data Analysis & AI Algorithm Platform
 
+> Development Guide
 
+## Overview
 
+D3A platform is built on Domain-Driven Design principles. It's a comprehensive data analysis toolkit centered around graph data analysis, AI algorithms, and in-memory real-time computing technology. The platform enables highly complex data analysis tasks from a business-oriented perspective by combining relationship analysis, temporal analysis, and geospatial (GIS) analysis capabilities.
 
+---
 
-***
-# <span style="color:#CE0000;"> D3A - Data Analysis & AI Algorithm Platform Development Guide
+## Core Concepts
 
+The D3A platform uses the following terms to model business domains:
 
+### **Type**
+Conceptual types define any real or logical concept in a domain model. They include attribute view types and relationship attachment rules.
 
-#### ➜ Overview 
+### **Entity**
+A conceptual entity is a concrete data representation of a specific type, representing either a real-world object or a logical concept.
 
-D3A platform based on Domain-Driven Design, A data analysis toolkit centered around graph data analysis, AI algorithms, and in-memory real-time computing technology. It can perform highly complex data analysis tasks using a business-oriented perspective, by utilizing capabilities such as relationship analysis, time analysis, and planar geographic spatial (GIS) analysis in a comprehensive manner that is easy to understand.
+### **Attribute**
+Defines the structure of data information within a conceptual type, including name, description, and data type.
 
-#### ➜ Term 
+### **AttributesView**
+A container that groups multiple attributes together, describing a specific category of information for a conceptual type.
 
-D3A The business model of the data analysis platform uses the following terms to describe the concepts of various objects required to implement a business domain model. By combining the functions of these objects, all the data management and analysis-related business requirements for a specific domain model can be achieved.
+### **RelationshipType**
+Describes how conceptual entities associate with each other (e.g., spatial containment or logical dependency).
 
-**Type**：Conceptual types refer to the types of any real or logical concepts that can be included in a specific domain model. It includes the type of all attribute view types that can be contained in objects of this type, as well as the type definitions of relationship attachment rules that can be performed on objects of this type.
+### **RelationshipEntity**
+A concrete instance of a relationship type, representing an actual association between two entities.
 
-**Entity**：A conceptual entity is a real data representation of a specific conceptual type, which represents an objective object existing in the real world or a virtual object existing in a logical concept.
+### **RelationshipAttachmentRule**
+Execution rules for linking entities of two specific conceptual types.
 
-**Attribute**：Attribute types refer to the basic structure of a data information contained in a conceptual type. An attribute type includes the name of the attribute, its description, and the data type of the attribute.
+### **Classification**
+Non-domain-specific dictionary concepts (e.g., gender, race, building types) used for multidimensional data analysis.
 
-**AttributesView**: An attribute view type is a view container that contains multiple attribute types. Multiple attribute types can be included in an attribute view type. The attribute view type is directly associated with the conceptual type, and it describes a collection of attribute information of a specific category included in a conceptual type.
+### **TimeFlow**
+Represents a continuous period of time composed of various time interval entities, enabling temporal analysis.
 
-**RelationshipType**: Relationship types describe a specific way of association between conceptual entities, such as a containment relationship between two entity objects in space or a dependency relationship between two entity objects logically.
+### **TimeScaleEntity**
+A specific point or range in time (day, hour, minute) used to organize and analyze temporal data.
 
-**RelationshipEntity**: A relationship entity is a real data representation of a specific relationship type, representing an objective association between two conceptual entities in a specific domain model.
+### **TimeScaleEvent**
+Connects an entity to a specific point in time to describe time-related business information.
 
-**RelationshipAttachmentRule**：Relationship attachment rules represent specific execution rules for linking entity data of two specific conceptual types to each other.
+### **Geospatial**
+Represents a geographical area with multiple administrative division levels for spatial analysis.
 
-**Classification**：Classification represents a category of objectively existing, non-business-specific and non-analysis-specific dictionary concepts, such as gender, race, building type classification, etc. It generally interacts with various types of entity objects in a specific domain model and is an important goal for multidimensional data analysis in the domain model.
+### **GeospatialScaleEntity**
+A specific administrative region (country, city, street) used for geospatial analysis.
 
-**TimeFlow**：A time stream is a representation of a continuous period of time, composed of various granularity time interval entities. It can be created, traversed, and accessed using various methods. Time streams are an important tool for temporal analysis in a domain model.
+### **GeospatialScaleEvent**
+Connects an entity to a specific geographic location for spatial analysis.
 
-**TimeScaleEntity**：A time scale entity represents a specific point in time or a range of time within a time flow. It is a concrete representation of a time unit, such as a day, hour, or minute, and can be used to organize and analyze temporal data. Time scale entities are an important component of time series analysis and can be used to group and aggregate data based on temporal intervals.
+---
 
-**TimeScaleEvent**：An event represents a time-related occurrence of a regular concept entity at a specific moment. A regular concept entity is associated with a unique time-scale event at a specific time point, which is represented by a time-scale entity, to describe the business information of the concept entity at a specific time.
+## Architecture
 
-**Geospatial**：Geospatial refers to the entity representation of a geographical area. It includes a series of geospatial scale entities representing different levels of administrative divisions, with varying granularity. Geospatial regions can be created, traversed, and geospatial scale entities can be retrieved using various methods. Geospatial regions are an important way to conduct spatial analysis in a domain model.
+### Core Realm Scope
+![D3A Core Architecture](documentPic/coreRealmScope_new.png)
 
-**GeospatialScaleEntity**：Geospatial Scale Entity is a special type of concept entity, where each entity represents a specific administrative region, such as a country or a street community. A series of contiguous geospatial scale entities are interrelated, forming a part of the group that makes up a geospatial region. Through geospatial scale events, a geospatial scale entity can be associated with any number of concept entities to describe geolocation information required for spatial analysis.
+---
 
-**GeospatialScaleEvent**：Represents an event related to space, which describes a regular concept entity at a specific geographic location. A regular concept entity is associated with a unique geographic scale entity through a unique geographic scale event that represents the administrative division to which the location belongs. This is used to describe the business information of the regular concept entity at a specific geographic location.
+## Example Domain Models
 
-The basic interaction relationships between the objects represented by each term are explained as follows：
+### Underground Pipeline Network
+- **Entities**: PipePoint (9,696), PipeTubulation (9,281)
+- **Relationships**: connectTo (17,044)
 
-![image](documentPic/coreRealmScope.jpg)
+![Pipeline Network](documentPic/graph_UndergroundPipelineNetworkRealm.png)
 
-
-
-###### ↳ Underground Pipeline Network Realm
-
-A small domain model that contains conceptual entities:
- ***PipePoint***  （9696），  ***PipeTubulation*** （9281），relationship ***connectTo*** （17044）。
-
-Example of a domain concept: ![image](documentPic/graph_UndergroundPipelineNetworkRealm.png)
-
-Create a program:
-
+**Generator Class:**
 ```java
-generator.realmExample.com.github.d3a.UndergroundPipelineNetwork_Realm_Generator
+com.github.d3a.realmExample.UndergroundPipelineNetwork_Realm_Generator
 ```
 
-###### ↳ Song Playlists Realm
+---
 
-The medium domain model contains conceptual entities: ***Song***（quantity 9775） ， ***MusicTag***（quantity 250）  ，***Playlist***（188064），relationship ***playedInList*** （1790143）， ***belongsToMusicType***（149041).
+### Song Playlists
+- **Entities**: Song (9,775), MusicTag (250), Playlist (188,064)
+- **Relationships**: playedInList (1,790,143), belongsToMusicType (149,041)
 
-Example:![image](documentPic/graph_SongPlaylistsRealm.png)
+![Song Playlists](documentPic/graph_SongPlaylistsRealm.png)
 
-Create a program:
-
+**Generator Class:**
 ```java
-generator.realmExample.com.github.d3a.SongPlaylists_Realm_Generator
+com.github.d3a.realmExample.SongPlaylists_Realm_Generator
 ```
 
-###### ↳ Seattle RealTime Fire 911 Calls Realm
+---
 
-The medium domain model contains conceptual entities: ***Fire911Call***(1471980), Timescale event entities ***occurredAt*** （1471980).
+### Seattle Fire 911 Calls
+- **Entities**: Fire911Call (1,471,980)
+- **Time Events**: occurredAt (1,471,980)
 
-Example：![image](documentPic/graph_SeattleRealTimeFire911CallsRealm.png)
+![Fire 911 Calls](documentPic/graph_SeattleRealTimeFire911CallsRealm.png)
 
-Create a program:
-
+**Generator Class:**
 ```java
-generator.realmExample.com.github.d3a.SeattleRealTimeFire911Calls_Realm_Generator
+com.github.d3a.realmExample.SeattleRealTimeFire911Calls_Realm_Generator
 ```
 
-###### ↳ Road Weather Information Stations Records Realm
+---
 
-The medium domain model contains conceptual entities: ***RoadWeatherRecords***（1790049）, Timescale event entities ***recordedAt*** （1790049）.
+### Road Weather Information
+- **Entities**: RoadWeatherRecords (1,790,049)
+- **Time Events**: recordedAt (1,790,049)
 
-Example：![image](documentPic/graph_RoadWeatherInformationStationsRecordsRealm.png)
+![Weather Records](documentPic/graph_RoadWeatherInformationStationsRecordsRealm.png)
 
-Create a program:
-
+**Generator Class:**
 ```java
-generator.realmExample.com.github.d3a.RoadWeatherInformationStationsRecords_Realm_Generator
+com.github.d3a.realmExample.RoadWeatherInformationStationsRecords_Realm_Generator
 ```
 
-###### ↳ Island GeoSpatial Data Realm
+---
 
-The medium domain model contains conceptual entities:  ***IndividualTree*** ，***Frutex*** ，***FunctionalZone*** ，***SectionBlock*** ，***Road*** ，***Building*** ，***ConstructionLand*** .The data in this domain describes the facility and vegetation data of a small island, and all conceptual entities can be computed for geospatial type data analysis.
+### Island Geospatial Data
+- **Entities**: IndividualTree, Frutex, FunctionalZone, SectionBlock, Road, Building, ConstructionLand
+- **Analysis**: Full geospatial data analysis capabilities
 
-Example：![image](documentPic/graph_Island_GeoDataRealm.png)
+![Island GeoData](documentPic/graph_Island_GeoDataRealm.png)
 
-Create a program:
-
+**Generator Class:**
 ```java
-generator.realmExample.com.github.d3a.Island_GeoData_Realm_Generator
+com.github.d3a.realmExample.Island_GeoData_Realm_Generator
 ```
 
-#### ➜ Platform architecture components
+---
 
+## Platform Architecture
 
-###### *System architecture diagram*
-
-![image](documentPic/sysStructure.jpg)
+![System Architecture](documentPic/sysStructure_new.png)
